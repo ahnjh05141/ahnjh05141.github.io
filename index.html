@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<h1>My First Heading</h1>
-<img src="https://cdn.pixabay.com/photo/2023/11/20/23/06/woman-8402052_1280.jpg">
-<p>My first paragraph.</p>
-
-</body>
+<html lang="en">
+<div style="text-align: center;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>이미지 변경하기</title>
+        <script>
+            function changeImage() {
+                var newImageUrl = document.getElementById("imageUrlInput").value;
+                document.getElementById("displayImage").src = newImageUrl;
+            }
+        </script>
+    </head>
+    <body>
+        <label for="imageUrlInput">새 이미지 주소:</label>
+        <input type="text" id="imageUrlInput" placeholder="새 이미지 URL을 입력하세요">
+        <button onclick="changeImage()">변경</button>
+        <br>
+        <img id="displayImage" src="기본이미지.jpg" alt="기본 이미지">
+    </body>
+</div>
 </html>
